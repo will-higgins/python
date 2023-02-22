@@ -15,12 +15,12 @@ df=pd.read_excel("firewall-zone.xlsx")
 
 ## Find the row in the data that corresponds to IP address
 
-row = df.loc[df['IP Address'] == ip_address_str]
+row = df.loc[df['IP address'] == ip_address_str]
 
 ## If the row exists, print the name of the zone
 
 if not row.empty:
-    zone = row['Zone'].values[0]
+    zone = row['zone'].values[0]
     print(f"The IP adderess {ip_address_str} belongs to the {zone} zone")
 else:
     #If there is no match
